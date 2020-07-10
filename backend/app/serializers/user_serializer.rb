@@ -3,5 +3,5 @@ class UserSerializer
   has_many :items
   has_many :bids
   
-  attributes :full_name, :email, :date_of_birth
+  attributes :full_name, :email, :date_of_birth, :items, :bids
 end

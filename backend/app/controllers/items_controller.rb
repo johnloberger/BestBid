@@ -1,5 +1,9 @@
 class ItemsController < ApplicationController
 
+  def create
+    item = Item.create(name: params[:name], image: params[:image], starting_price: params[:starting_price], description: params[:description], duration: params[:duration])
+    render json: item
+  end
 
   def index 
     items = Item.all 

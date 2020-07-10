@@ -10,6 +10,7 @@ body {
   width: 800px;
   margin: auto;
   margin-top: 50px;
+  display: none;
 }
 
 #counter {
@@ -17,6 +18,11 @@ body {
   color: white;
   display: table;
   padding: 10px;
+}
+
+
+#item-bid-price {
+  white-space: nowrap;
 }
 
 
@@ -46,6 +52,13 @@ input:focus {
   float: left;
   width: 250px;
   margin: auto;
+  
+}
+
+.item-price {
+  color: #0066FF;
+  font-family:arial;
+  font-size: 30px;
 }
 
 .item-frame {
@@ -97,12 +110,23 @@ img {
   color: #2d72fc;
 }
 
+.formContainer {
+  padding: 1rem;
+  width: stretch;
+  height: auto;
+  display: none;
+  background: #ffffff;
+  opacity: .8;
+}
+
 .bid-button {
   font-size: 2rem;
   border: 3px solid #98e3a5;
   background-color: #ffffff;
   color: #000000;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
 }
 
 .bid-button:hover {
@@ -124,4 +148,39 @@ a.effect-shine:hover {
   to {
     -webkit-mask-position: -50%;
   }
+}
+a.effect-box:after,
+a.effect-box:before {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	
+}
+
+a.effect-box:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: scale(1,0);
+	transform: scale(1,0);
+}
+
+a.effect-box:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+a.effect-box:hover:after,
+a.effect-box:hover:before {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
 }

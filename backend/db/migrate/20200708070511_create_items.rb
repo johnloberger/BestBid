@@ -4,7 +4,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :image
       t.string :name
       t.integer :user_id
-      t.integer :starting_price
+      t.float :starting_price
       t.integer :duration
       t.string :description
       t.boolean :is_available
