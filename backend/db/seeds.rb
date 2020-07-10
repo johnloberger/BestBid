@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Item.destroy_all
+Bid.destroy_all
 
 user_1 = User.create(full_name: 'Tom Smith', email: 'tomsmith@yahoo.com', date_of_birth: '05/19/90', location: 'Chicago', profile_picture: 'https://i.imgur.com/qF2JiTo.jpg') 
 user_2 = User.create(full_name: 'George Johnson', email: 'gjohnson@yahoo.com', date_of_birth: '11/18/91', location: 'Chicago', profile_picture: 'https://i.imgur.com/h78QOSF.jpg') 
@@ -15,7 +16,9 @@ user_4 = User.create(full_name: 'Samantha Smith', email: 'samsmith@gmail.com', d
 user_5 = User.create(full_name: 'Ashley Brown', email: 'ashleybrown@gmail.com', date_of_birth: '08/22/99', location: 'Chicago', profile_picture: 'https://i.imgur.com/T00fhYj.jpg.jpg') 
 user_6 = User.create(full_name: 'Sarah Turner', email: 'sarahturner@yahoo.com', date_of_birth: '03/30/98', location: 'Houston', profile_picture: 'https://i.imgur.com/Nf4Qwa7.jpg') 
 
-item_1 = Item.create(image: 'https://www.generatormix.com/images/yugioh/timeater.jpg', name: 'Timeater Yugioh Card', user_id: user_1.id, starting_price: 5, duration: 1, description: 'Slightly worn card, ask me for other cards!', is_available: true, like_count: 0)
-item_2 = Item.create(image: 'https://www.generatormix.com/images/yugioh/timeater.jpg', name: 'Slightly Worn Timeater Yugioh Card', user_id: user_1.id, starting_price: 6, duration: 2, description: 'Slightly worn card, ask me for other cards!', is_available: true, like_count: 0)
-item_3 = Item.create(image: 'https://www.generatormix.com/images/yugioh/timeater.jpg', name: 'Slightly Worn Timeater Yugioh Card', user_id: user_1.id, starting_price: 6, duration: 3, description: 'Slightly worn card, ask me for other cards!', is_available: true, like_count: 0)
-item_4 = Item.create(image: 'https://www.generatormix.com/images/yugioh/timeater.jpg', name: 'Slightly Worn Timeater Yugioh Card', user_id: user_1.id, starting_price: 6, duration: 4, description: 'Slightly worn card, ask me for other cards!', is_available: true, like_count: 0)
+item_1 = Item.create(image: 'https://www.generatormix.com/images/yugioh/timeater.jpg', name: 'Timeater Yugioh Card', user_id: user_1.id, starting_price: 5000.99, duration: 1, description: 'Slightly worn card, ask me for other cards!', is_available: true, like_count: 0, created_at:"10/07/2020 12:00:00")
+item_2 = Item.create(image: 'https://www.generatormix.com/images/yugioh/timeater.jpg', name: 'Slightly Worn Timeater Yugioh Card', user_id: user_1.id, starting_price: 69.69, duration: 1, description: 'Slightly worn card, ask me for other cards!', is_available: true, like_count: 0, created_at:"10/07/2020 08:00:00")
+item_3 = Item.create(image: 'https://www.generatormix.com/images/yugioh/timeater.jpg', name: 'Slightly Worn Timeater Yugioh Card', user_id: user_1.id, starting_price: 60009.03, duration: 1, description: 'Slightly worn card, ask me for other cards!', is_available: true, like_count: 0, created_at:"10/07/2020 09:00:00")
+item_4 = Item.create(image: 'https://www.generatormix.com/images/yugioh/timeater.jpg', name: 'Slightly Worn Timeater Yugioh Card', user_id: user_1.id, starting_price: 6, duration: 5, description: 'Slightly worn card, ask me for other cards!', is_available: true, like_count: 0, created_at:"09/07/2020 19:00:00")
+
+# bid_1 = Bid.create(amount: 5250, user_id: user_4.id, item_id: item_1.id, is_winner: false)

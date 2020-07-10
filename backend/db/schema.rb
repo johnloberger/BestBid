@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_07_08_070704) do
 
   create_table "bids", force: :cascade do |t|
     t.boolean "is_winner"
-    t.integer "amount"
+    t.float "amount"
     t.integer "item_id"
     t.integer "user_id"
     t.datetime "created_at"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_07_08_070704) do
     t.string "image"
     t.string "name"
     t.integer "user_id"
-    t.integer "starting_price"
+    t.float "starting_price"
     t.integer "duration"
     t.string "description"
     t.boolean "is_available"
